@@ -21,28 +21,27 @@ let tl = gsap.timeline(
 tl.to("#scene1  > img:nth-child(7)", {
   scale: 3,
   duration: 3,
-  webkitFilter: "blur(10px)",
+//   webkitFilter: "blur(10px)",
   //   opacity: 0,
   ease: "sine.inOut",
-  stagger: -0.2,
   duration: 1
  
 })
 .to("#scene1 > img:nth-child(6)", {
   scale: 3,
   duration: 3,
-  webkitFilter: "blur(10px)",
+//   webkitFilter: "blur(10px)",
   opacity: 0,
   ease: "sine.inOut",
-  duration: 1.1
+  duration: 1.2
 },0)
 .to("#scene1 > img:nth-child(5)", {
     scale: 3,
     duration: 3,
-    webkitFilter: "blur(10px)",
+    // webkitFilter: "blur(10px)",
     opacity: 0,
     ease: "sine.inOut",
-    duration: 1.2
+    duration: 1.4
   },0)
   .to("#scene1 > img:nth-child(4)", {
     scale: 3,
@@ -50,29 +49,29 @@ tl.to("#scene1  > img:nth-child(7)", {
     webkitFilter: "blur(10px)",
     opacity: 0,
     ease: "sine.inOut",
-    duration: 1.3
+    duration: 1.6
   },0)
   .to("#scene1 > img:nth-child(3)", {
     scale: 3,
     duration: 3,
-    webkitFilter: "blur(10px)",
+    // webkitFilter: "blur(10px)",
     opacity: 0,
     ease: "sine.inOut",
-    duration: 1.4
+    duration: 1.8
   },0)
   .to("#scene1 > img:nth-child(2)", {
     scale: 3,
     duration: 3,
-    webkitFilter: "blur(10px)",
+    // webkitFilter: "blur(10px)",
     opacity: 0,
     ease: "sine.inOut",
-    duration: 1.5
+    duration: 2
   },0)
   .to("#scene1 > img:nth-child(1)", {
     scale: 3,
     duration: 3,
     ease: "sine.inOut",
-    duration: 1.6
+    duration: 2.2
   },0);
 
 
