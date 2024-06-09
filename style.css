@@ -24,7 +24,7 @@ img {
 }
 
 
-#scene1  img {
+.fc1  img {
     position: absolute;
     top: inherit !important;
     left: inherit !important;

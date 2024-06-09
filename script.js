@@ -9,7 +9,7 @@ let tl = gsap.timeline(
         scrollTrigger: {
             trigger: "section",
             start: "top top",
-            end: "+=300%",
+            end: "+=500%",
             pin: true,
             scrub: true,
             // markers: true
@@ -31,7 +31,7 @@ tl.to("#scene1  > img:nth-child(7)", {
   scale: 3,
   duration: 3,
 //   webkitFilter: "blur(10px)",
-  opacity: 0,
+//   opacity: 0,
   ease: "sine.inOut",
   duration: 1.2
 },0)
@@ -39,15 +39,15 @@ tl.to("#scene1  > img:nth-child(7)", {
     scale: 3,
     duration: 3,
     // webkitFilter: "blur(10px)",
-    opacity: 0,
+    // opacity: 0,
     ease: "sine.inOut",
     duration: 1.4
   },0)
   .to("#scene1 > img:nth-child(4)", {
     scale: 3,
     duration: 3,
-    webkitFilter: "blur(10px)",
-    opacity: 0,
+    // webkitFilter: "blur(10px)",
+    // opacity: 0,
     ease: "sine.inOut",
     duration: 1.6
   },0)
@@ -55,7 +55,7 @@ tl.to("#scene1  > img:nth-child(7)", {
     scale: 3,
     duration: 3,
     // webkitFilter: "blur(10px)",
-    opacity: 0,
+    // opacity: 0,
     ease: "sine.inOut",
     duration: 1.8
   },0)
@@ -63,7 +63,7 @@ tl.to("#scene1  > img:nth-child(7)", {
     scale: 3,
     duration: 3,
     // webkitFilter: "blur(10px)",
-    opacity: 0,
+    // opacity: 0,
     ease: "sine.inOut",
     duration: 2
   },0)
