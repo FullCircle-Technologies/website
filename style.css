@@ -1,0 +1,31 @@
+
+body{
+    color: white;
+    overflow-x: hidden;
+}
+
+* {
+    overflow-x: hidden;
+}
+
+.home {
+    height: 200vh;
+    isolation: isolate;
+}
+
+.topi {
+    top:inherit !important;
+}
+
+img {
+    max-width: none !important;
+    scale: 1;
+    
+}
+
+
+#scene1  img {
+    position: absolute;
+    top: inherit !important;
+    left: inherit !important;
+}
