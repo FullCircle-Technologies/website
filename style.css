@@ -1,31 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
 
-body{
-    color: white;
-    overflow-x: hidden;
+body {
+  color: white;
+  overflow-x: hidden;
+  font-family: "Jura", sans-serif;
 }
 
 * {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .home {
-    height: 200vh;
-    isolation: isolate;
+  height: 200vh;
+  isolation: isolate;
 }
 
-.topi {
-    top:inherit !important;
+.fc1 {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
 }
 
-img {
-    max-width: none !important;
-    scale: 1;
-    
+.fc1 img {
+  position: absolute;
+  /* height: 140%;
+    width: 140%;
+    top:-20px !important;
+    left: -20px !important; */
+  pointer-events: none;
 }
 
+.text1 {
+  position: absolute;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  top: 50% important;
+  overflow: hidden;
+}
 
-.fc1  img {
-    position: absolute;
-    top: inherit !important;
-    left: inherit !important;
+.paper {
+  z-index: 20;
+}
+
+input:not(:placeholder-shown) {
+  border-color: black;
+}
+
+input:placeholder-shown {
+    color:black;
+  border-color: rgb(131, 131, 131);
+}
+
+input::placeholder {
+  color: rgb(131, 131, 131);
 }

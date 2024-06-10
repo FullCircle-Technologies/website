@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,21 +14,41 @@
   </head>
   <body>
 
-    <section class="fc1 h-screen w-screen overflow-hidden relative flex items-center justify-center" id="scene1">
-      <img class="h-full w-full object-cover" src="assets/scene1_1.png" alt="">
-      <img class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_2.png" alt="" data-depth="0.01">
-      <img class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_3.png" alt="" data-depth="0.02">
-      <img class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_4.png" alt="" data-depth="0.03">
-      <img class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_5.png" alt="" data-depth="0.04">
-      <img class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_6.png" alt="" data-depth="0.05">
-      <img class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_7.png" alt="" data-depth="0.06" id="scene_1_7">
-     
-     
-      
+    <section class="fc1 h-screen w-screen overflow-hidden relative flex items-center justify-center" id="scene1" >
+      <img id="img1" class="h-full w-full object-cover" src="assets/scene1_1.png" alt="" >
+      <img id="img2" class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_2.png" alt="" data-depth="0.01" >
+      <div id="paper" class="text1 paper w-full text-6xl text-center font-bold overflow-hidden flex gap-10">
+        <img class="absolute" src="assets/paper.png" alt="">
+        <div class="flex-col justify-start items-center  inline-flex absolute -mt-30">
+          <div class="text-center text-black text-3xl font-bold font-['Jura'] uppercase leading-10">MEN AND WOMEN WANTED</div>
+          <div class="w-96 text-center text-black text-lg font-bold font-['Jura'] leading-relaxed">for hazardous journey, bitter cold, long months of complete darkness, constant danger, safe return doubtful, honor and <br/>recognition in case of success.</div>
+          <div class="text-center text-black text-base font-bold font-['Jura'] leading-normal">Pier 50, San Francisco, CA </div>
+          <div class="flex  items-center flex-col gap-5 mt-5" id="input">
+            <input placeholder="LinkedIn/ X handle/ Portfolio" class="inp  w-96 bg-transparent ring-0 text-black outline-none border-b-2 text-2xl placeholder:text-xl" type="text" name="" id="">
+            <input placeholder="Phone number" class="inp  w-96 bg-transparent ring-0 text-black outline-none border-b-2 text-2xl placeholder:text-xl" type="text" name="" id="">
+          </div>
+          <button id="button" onclick="showInput()" class="mt-5 text-white text-lg font-bold bg-black text-center py-2 px-6 hover:bg-white hover:text-black  ease-in-out duration-300">Join the expedition</button>
 
-
+        </div>
+        
+       
+          
+      </div>
+      <img id="img3" class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_3.png" alt="" data-depth="0.02" > 
+      <img id="img4" class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_4.png" alt="" data-depth="0.08" >
+      <img id="img5" class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_5.png" alt="" data-depth="0.1" >
+      <img id="img6" class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_6.png" alt="" data-depth="0.15">
+      <div id="text1" class="text1 w-full text-6xl text-center font-bold overflow-hidden flex gap-20">
+        <div class="overflow-hidden text-2xl">
+          Full Circle
+        </div>
+        <div class="overflow-hidden">You Already Have<br/>
+        What it Takes.</div></div>
+      <img id="img7" class="w-[110vw]  h-full object-cover scene1" src="assets/scene1_7.png" alt="" data-depth="0.2">
     </section>
-   
+      
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="script.js"></script>
   </body>
 </html>
