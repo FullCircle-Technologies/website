@@ -171,19 +171,19 @@ tl.to("#img7", {
     // webkitFilter: "blur(10px)",
     // opacity: 0,
     ease: "sine.inOut",
-    duration: 2
+    duration: 1.8
   },0)
   .to("#img1", {
     scale: 3,
     duration: 3,
     ease: "sine.inOut",
-    duration: 2.2
+    duration: 1.8
   },0)
   .from("#paper", {
-    top:"200%",
+    top:"150%",
     zIndex: 10,
     ease: "sine.inOut",
-    duration: 2.2
+    duration: 1.2
   },0);
 
 //   gsap.to("#scene1 > img:nth-child(5)", {
