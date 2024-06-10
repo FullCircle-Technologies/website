@@ -38,10 +38,21 @@ body {
   height: 100%;
   top: 50% important;
   overflow: hidden;
+  pointer-events: none;
+
+}
+
+#text2 {
+    justify-content: start;
+    
+
+  
 }
 
 .paper {
-  z-index: 20;
+  /* z-index: 20; */
+  pointer-events: unset;
+  /* display: none !important; */
 }
 
 input:not(:placeholder-shown) {

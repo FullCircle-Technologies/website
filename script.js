@@ -19,7 +19,7 @@ let tl = gsap.timeline({
   scrollTrigger: {
     trigger: "section",
     start: "top top",
-    end: "+=300%",
+    end: "+=2000%",
     pin: true,
     scrub: true,
     // markers: true
@@ -119,71 +119,72 @@ let tl = gsap.timeline({
 
 tl.to("#img7", {
   scale: 3,
-  duration: 3,
 //   webkitFilter: "blur(10px)",
   //   opacity: 0,
   ease: "sine.inOut",
   duration: 1
-})
+}).to("#text2", {
+  scale: 3,
+//   webkitFilter: "blur(10px)",
+  //   opacity: 0,
+  ease: "sine.inOut",
+  duration: 2
+},0)
 .to("#text1", {
   scale: 3,
-  duration: 3,
-  webkitFilter: "blur(10px)",
-  opacity: 0,
+  // webkitFilter: "blur(10px)",
+  // opacity: 0,
+  marginTop: "80%",
   ease: "sine.inOut",
-  duration: 1.2
+  duration: 8
 },0)
 .to("#img6", {
   scale: 3,
-  duration: 3,
 //   webkitFilter: "blur(10px)",
 //   opacity: 0,
   ease: "sine.inOut",
-  duration: 1.2
+  duration: 3
 },0)
 .to("#img5", {
     scale: 3,
-    duration: 3,
     // webkitFilter: "blur(10px)",
     // opacity: 0,
     ease: "sine.inOut",
-    duration: 1.4
+    duration: 8
   },0)
   .to("#img4", {
     scale: 3,
-    duration: 3,
     // webkitFilter: "blur(10px)",
     // opacity: 0,
     ease: "sine.inOut",
-    duration: 1.6
+    duration: 12
   },0)
   .to("#img3", {
     scale: 3,
-    duration: 3,
+    marginTop: "20%",
     // webkitFilter: "blur(10px)",
     // opacity: 0,
     ease: "sine.inOut",
-    duration: 1.8
+    duration: 16
   },0)
   .to("#img2", {
     scale: 3,
-    duration: 3,
     // webkitFilter: "blur(10px)",
     // opacity: 0,
     ease: "sine.inOut",
-    duration: 1.8
+    duration: 20
   },0)
   .to("#img1", {
-    scale: 3,
-    duration: 3,
+    scale: 2,
     ease: "sine.inOut",
-    duration: 1.8
+    duration: 25
   },0)
   .from("#paper", {
     top:"150%",
-    zIndex: 10,
+    scale: "0.2",
+    // zIndex: 10,
     ease: "sine.inOut",
-    duration: 1.2
+    duration: 10
   },0);
 
 //   gsap.to("#scene1 > img:nth-child(5)", {
