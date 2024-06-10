@@ -1,6 +1,11 @@
 // var scene1 = document.getElementById('scene1');
 // var parallaxInstance = new Parallax(scene1);
 
+
+// var images = document.querySelectorAll('img');
+// new simpleParallax(images);
+
+
 // gsap
 gsap.registerPlugin(ScrollTrigger);
 
