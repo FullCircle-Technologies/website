@@ -149,7 +149,7 @@ tl.to("#img7", {
   scale: 3,
   // webkitFilter: "blur(10px)",
   // opacity: 0,
-  marginTop: "70%",
+  top: "100%",
   ease: "sine.inOut",
   duration: 10
 },0)
@@ -176,7 +176,7 @@ tl.to("#img7", {
   },0)
   .to("#img3", {
     scale: 2,
-    marginTop: "20%",
+    marginTop: "30%",
     // webkitFilter: "blur(10px)",
     // opacity: 0,
     ease: "sine.inOut",
