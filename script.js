@@ -4,6 +4,9 @@ function showInput(){
   var input = document.getElementById('input');
   input.style.display = 'flex';
   document.getElementById('button').style.display = 'none';
+  // TweenMax.to("#button", 2, {opacity:0,visibility:"hidden"});
+  // TweenMax.to("#input", 0, {opacity:1,display:"flex", duration: 1});
+
 
 }
 
@@ -15,9 +18,9 @@ document.getElementById('input').addEventListener('submit', function(event) {
   const handle = document.getElementById('handle').value;
   const phone = document.getElementById('phone').value;
 
-  const phonePattern = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+  const phonePattern = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/;
 
-  if (!phone.match(phonePattern) && phone.replace(/\D/g, '').length > 10) {
+  if (!phone.match(phonePattern) && phone.length < 10) {
     alert('Please enter a valid phone number.');
     return; // Stop form submission if phone number is invalid
   }
@@ -53,7 +56,12 @@ document.getElementById('input').addEventListener('submit', function(event) {
 
 
 
+
+
 // gsap
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -70,6 +78,9 @@ gsap.ticker.add((time)=>{
 })
 
 gsap.ticker.lagSmoothing(0)
+
+
+
 
 let tl = gsap.timeline({
   scrollTrigger: {

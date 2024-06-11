@@ -20,7 +20,7 @@ body {
   transform: perspective(1000px);
 }
 
-.fc1 img {
+.fc1 > img {
   position: absolute;
   /* height: 140%;
     width: 140%;
@@ -45,7 +45,9 @@ body {
 #text2 {
     justify-content: start;
     
-
+  position: absolute;
+  z-index: 30;
+  
   
 }
 
@@ -59,6 +61,7 @@ body {
 .paper * {
   overflow: hidden;
 }
+
 input:not(:placeholder-shown) {
   border-color: black;
 }
