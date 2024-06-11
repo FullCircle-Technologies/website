@@ -43,13 +43,24 @@ body {
 }
 
 #text2 {
-    justify-content: start;
-    
-  position: absolute;
-  z-index: 30;
-  
+  justify-content: start;
+  position: fixed;
+  z-index: 40;
+
   
 }
+
+
+#loading_text {
+  animation: fadeIn 2s infinite alternate;
+}
+
+@keyframes fadeIn { 
+  from { opacity: 0.2; } 
+}
+
+
+
 
 .paper {
   /* z-index: 20; */
