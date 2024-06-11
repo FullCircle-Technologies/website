@@ -65,19 +65,16 @@ document.getElementById('input').addEventListener('submit', function(event) {
 gsap.registerPlugin(ScrollTrigger);
 
 
-// const lenis = new Lenis()
+const lenis = new Lenis()
 
-// lenis.on('scroll', (e) => {
-//   console.log(e)
-// })
 
-// lenis.on('scroll', ScrollTrigger.update)
+lenis.on('scroll', ScrollTrigger.update)
 
-// gsap.ticker.add((time)=>{
-//   lenis.raf(time * 1000)
-// })
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
 
-// gsap.ticker.lagSmoothing(0)
+gsap.ticker.lagSmoothing(0)
 
 
 
@@ -86,7 +83,7 @@ let tl = gsap.timeline({
   scrollTrigger: {
     trigger: "section",
     start: "top top",
-    end: "+=2000%",
+    end: "+=300%",
     pin: true,
     scrub: true,
     // markers: true
@@ -138,7 +135,7 @@ tl.to("#img7", {
   },0)
   .to("#img3", {
     scale: 2,
-    marginTop: "30%",
+    // marginTop: "30%",
     // webkitFilter: "blur(10px)",
     // opacity: 0,
     ease: "sine.inOut",
