@@ -191,17 +191,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Start the animations
-  incrementalCount(0, 20, 800, function() {
+  incrementalCount(20, 45, 1000, function() {
     setTimeout(function() {
-      incrementalCount(20, 45, 800, function() {
+      incrementalCount(45, 100, 1500, function() {
         setTimeout(function() {
-          incrementalCount(45, 100, 800, function() {
-            setTimeout(function() {
-              document.querySelector('#loading').style.display= 'none';
-              gsap.fromTo(".main",{'webkitFilter': 'blur(10px)',}, {'webkitFilter': 'blur(0px)',opacity: 1, duration: 1, ease: "sine.inOut"});
-            }, 100); // Wait 1 second before fading out
-          });
-        }, 1000);
+          document.querySelector('#loading').style.display= 'none';
+          gsap.fromTo(".main",{'webkitFilter': 'blur(10px)',}, {'webkitFilter': 'blur(0px)',opacity: 1, duration: 1, ease: "sine.inOut"});
+        }, 100); // Wait 1 second before fading out
       });
     }, 1000);
   });
