@@ -17,7 +17,7 @@ document.getElementById('input').addEventListener('submit', function(event) {
 
   const phonePattern = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
 
-  if (!phone.match(phonePattern)) {
+  if (!phone.match(phonePattern) && phone.replace(/\D/g, '').length > 10) {
     alert('Please enter a valid phone number.');
     return; // Stop form submission if phone number is invalid
   }
