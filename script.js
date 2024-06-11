@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function() {
           incrementalCount(45, 100, 800, function() {
             setTimeout(function() {
               document.querySelector('#loading').style.display= 'none';
-              gsap.to(".main", {opacity: 1, duration: 3});
+              gsap.fromTo(".main",{'webkitFilter': 'blur(10px)',}, {'webkitFilter': 'blur(0px)',opacity: 1, duration: 1, ease: "sine.inOut"});
             }, 100); // Wait 1 second before fading out
           });
         }, 1000);

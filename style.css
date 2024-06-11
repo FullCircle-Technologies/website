@@ -51,12 +51,14 @@ body {
 }
 
 
-#loading_text {
-}
+/* #loading_text {
+} */
 
 
 .main {
   opacity: 0;
+  /* transform: scale(2); */
+
 }
 
 
