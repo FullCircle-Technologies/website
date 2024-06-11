@@ -151,7 +151,7 @@ tl.to("#img7", {
   .to("#img1", {
     scale: 1.5,
     ease: "sine.inOut",
-    duration: 32
+    duration: 24
   },0)
   .from("#paper", {
     top:"150%",
