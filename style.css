@@ -53,6 +53,7 @@ body {
   /* z-index: 20; */
   pointer-events: unset;
   /* display: none !important; */
+  transform: scale(80%);
 }
 
 input:not(:placeholder-shown) {

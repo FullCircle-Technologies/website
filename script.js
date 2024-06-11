@@ -12,6 +12,21 @@ function showInput(){
 
 }
 
+
+function handleSubmit(){
+  var rec = document.getElementById('recieved');
+  var form = document.getElementById('form');
+
+  var value = input.value;
+  form.style.display = 'none';
+  // form.style.display = 'none';
+  rec.style.display = 'flex';
+  // document.getElementById('button').style.display = 'flex';
+  // document.getElementById('button').innerHTML = value;
+
+
+}
+
 // gsap
 gsap.registerPlugin(ScrollTrigger);
 
@@ -180,7 +195,7 @@ tl.to("#img7", {
     // webkitFilter: "blur(10px)",
     // opacity: 0,
     ease: "sine.inOut",
-    duration: 18
+    duration: 14
   },0)
   .to("#img2", {
     scale: 1.8,
@@ -199,7 +214,7 @@ tl.to("#img7", {
     scale: "0.2",
     // zIndex: 10,
     ease: "sine.inOut",
-    duration: 12
+    duration: 6
   },0);
 
 //   gsap.to("#scene1 > img:nth-child(5)", {
