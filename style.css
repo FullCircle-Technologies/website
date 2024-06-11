@@ -52,14 +52,12 @@ body {
 
 
 #loading_text {
-  animation: fadeIn 2s infinite alternate;
-}
-
-@keyframes fadeIn { 
-  from { opacity: 0.2; } 
 }
 
 
+.main {
+  opacity: 0;
+}
 
 
 .paper {

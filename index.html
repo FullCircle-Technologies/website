@@ -8,24 +8,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script> -->
-    <!-- <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script>  -->
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script> 
 
   </head>
   <body>
 
-    <div class="loader bg-black w-screen h-screen fixed z-20 flex items-center justify-center hidden">
-      <div   class="overflow-hidden w-96 h-96 rounded-full border-2 border-white uppercase tracking-[20px] font-semibold text-center items-center flex justify-center">
-        <div id="loading_text" class="text-center">FullCircle</div>
-      </div>
+    <div id="loading" class="loader flex-col  w-screen h-screen fixed z-20 flex items-start justify-end p-20">
+      <div id="progress_text" class=" text-7xl overflow-hidden">0</div>
+      <div id="loading_text" class="text-7xl min-h-fit overflow-hidden pb-2">Loading...</div>
     </div>
     
 
     <section class="fc1 h-screen w-screen overflow-hidden relative flex items-center justify-center" id="scene1" >
       <img id="img1" class="h-full w-full object-cover" src="img/scene1_1.webp" alt="" >
       
-      <img id="img2" class="w-[110vw]  h-full object-cover scene1" src="img/scene1_2.webp" alt="" >
-      <div id="paper" class="paper w-full h-full absolute overflow-hidden flex items-center justify-center">
+      <img id="img2" class="main w-[110vw]  h-full object-cover scene1" src="img/scene1_2.webp" alt="" >
+      <div id="paper" class="main paper w-full h-full absolute overflow-hidden flex items-center justify-center">
         <div class="flex h-[550px] w-[620px] relative p-16 pt-28">
           <div id="form" class="flex-col justify-start flex  z-10 -mt-30 w-full px-4 pb-4">
             <div class="text-center text-black text-xl md:text-2xl font-extrabold font-['Jura'] uppercase leading-10">MEN AND WOMEN WANTED</div>
@@ -54,21 +52,21 @@
         </div>   
         
       </div>
-      <img id="img3" class="w-[110vw]  h-full object-cover scene1" src="img/scene1_3.webp" alt=""  >
+      <img id="img3" class="main w-[110vw]  h-full object-cover scene1" src="img/scene1_3.webp" alt=""  >
 
       
-      <img id="img4" class="w-[110vw]  h-full object-cover scene1" src="img/scene1_4.webp" alt="" >
+      <img id="img4" class="main w-[110vw]  h-full object-cover scene1" src="img/scene1_4.webp" alt="" >
       
-      <img id="img5" class="w-[110vw]  h-full object-cover scene1" src="img/scene1_5.webp" alt=""  >
-      <div id="text1" class="text1 w-full text-4xl md:text-7xl   text-center font-bold overflow-hidden flex gap-20 mt-20 uppercase">
+      <img id="img5" class="main w-[110vw]  h-full object-cover scene1" src="img/scene1_5.webp" alt=""  >
+      <div id="text1" class="main text1 w-full text-4xl md:text-7xl   text-center font-bold overflow-hidden flex gap-20 mt-20 uppercase">
         <div class="overflow-hidden te">You Already Have<br/>
         What it Takes.</div>
       </div>
       
-      <img id="img6" class="w-[110vw]  h-full object-cover scene1" src="img/scene1_6.webp" alt="" >
+      <img id="img6" class="main w-[110vw]  h-full object-cover scene1" src="img/scene1_6.webp" alt="" >
       
-      <img id="img7" class="w-[110vw]  h-full object-cover scene1" src="img/scene1_7.webp" alt="" >
-      <div id="text2" class="text1 w-full text-6xl text-center font-bold overflow-hidden flex item-start gap-20 pt-40">
+      <img id="img7" class="main w-[110vw]  h-full object-cover scene1" src="img/scene1_7.webp" alt="" >
+      <div id="text2" class="main text1 w-full text-6xl text-center font-bold overflow-hidden flex item-start gap-20 pt-40">
         <div  class="overflow-hidden text-xl uppercase tracking-[20px] font-semibold">
           FullCircle
         </div></div>

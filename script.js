@@ -62,19 +62,19 @@ document.getElementById('input').addEventListener('submit', function(event) {
 
 
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 
-// const lenis = new Lenis()
+const lenis = new Lenis()
 
 
-// lenis.on('scroll', ScrollTrigger.update)
+lenis.on('scroll', ScrollTrigger.update)
 
-// gsap.ticker.add((time)=>{
-//   lenis.raf(time * 1000)
-// })
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
 
-// gsap.ticker.lagSmoothing(0)
+gsap.ticker.lagSmoothing(0)
 
 
 
@@ -161,3 +161,48 @@ tl.to("#img7", {
     duration: 6
   },0);
 
+
+
+
+// loading
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const textElement = document.querySelector('#progress_text');
+
+  function updateText(content) {
+    textElement.textContent = content + '%';
+  }
+
+  // Function to incrementally count from start to end value
+  function incrementalCount(start, end, duration, callback) {
+    let current = start;
+    const stepTime = duration / (end - start); // Time for each step
+    function step() {
+      updateText(current);
+      if (current < end) {
+        current++;
+        setTimeout(step, stepTime);
+      } else if (callback) {
+        callback();
+      }
+    }
+    step();
+  }
+
+  // Start the animations
+  incrementalCount(0, 20, 800, function() {
+    setTimeout(function() {
+      incrementalCount(20, 45, 800, function() {
+        setTimeout(function() {
+          incrementalCount(45, 100, 800, function() {
+            setTimeout(function() {
+              document.querySelector('#loading').style.display= 'none';
+              gsap.to(".main", {opacity: 1, duration: 3});
+            }, 100); // Wait 1 second before fading out
+          });
+        }, 1000);
+      });
+    }, 1000);
+  });
+});
