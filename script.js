@@ -1,8 +1,3 @@
-// var scene1 = document.getElementById("scene1");
-// var parallaxInstance = new Parallax(scene1);
-
-// var images = document.querySelectorAll('img');
-// new simpleParallax(images);
 
 
 function showInput(){
@@ -13,19 +8,50 @@ function showInput(){
 }
 
 
-function handleSubmit(){
+document.getElementById('input').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+
+  const handle = document.getElementById('handle').value;
+  const phone = document.getElementById('phone').value;
+
+  const phonePattern = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+
+  if (!phone.match(phonePattern)) {
+    alert('Please enter a valid phone number.');
+    return; // Stop form submission if phone number is invalid
+  }
+
+
   var rec = document.getElementById('recieved');
   var form = document.getElementById('form');
-
-  var value = input.value;
   form.style.display = 'none';
-  // form.style.display = 'none';
   rec.style.display = 'flex';
-  // document.getElementById('button').style.display = 'flex';
-  // document.getElementById('button').innerHTML = value;
 
 
-}
+
+  fetch('https://script.google.com/macros/s/AKfycbwKwZpIMa9R6nexGhVbxBzKtDIG-arkDnlkOso5e7Y1qHu9FCOHOuD-gm5jTXGbqxMKpw/exec', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded', // Ensure the content type matches the form submission
+    },
+    body: new URLSearchParams({
+      handle: handle,
+      phone: phone
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+    // Handle success - you can display a success message or redirect the user
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    // Handle error - you can display an error message to the user
+  });
+});
+
+
 
 // gsap
 gsap.registerPlugin(ScrollTrigger);
@@ -55,97 +81,6 @@ let tl = gsap.timeline({
     // markers: true
   },
 });
-
-// tl.to("#scene1  > img:nth-child(8)", {
-//   height: "600%",
-//   top: "-200%",
-//   // duration: 3,
-//   //   webkitFilter: "blur(10px)",
-//   //   opacity: 0,
-//   ease: "sine.inOut",
-//   duration: 1,
-// }).to(".text1", {
-//   fontSize: "180px",
-
-//   ease: "sine.inOut",
-//   duration: 1,
-// },0)
-//   .to(
-//     "#scene1 > img:nth-child(6)",
-//     {
-//       height: "200%",
-//       top: "-50%",
-//       duration: 3,
-//       //   webkitFilter: "blur(10px)",
-//       //   opacity: 0,
-//       ease: "sine.inOut",
-//       duration: 1.2,
-//     },
-//     0
-//   )
-//   .to(
-//     "#scene1 > img:nth-child(5)",
-//     {
-//       height: "200%",
-//       top: "-50%",
-//       duration: 3,
-//       // webkitFilter: "blur(10px)",
-//       // opacity: 0,
-//       ease: "sine.inOut",
-//       duration: 1.4,
-//     },
-//     0
-//   )
-//   .to(
-//     "#scene1 > img:nth-child(4)",
-//     {
-//       height: "200%",
-//       top: "-50%",
-//       duration: 3,
-//       // webkitFilter: "blur(10px)",
-//       // opacity: 0,
-//       ease: "sine.inOut",
-//       duration: 1.6,
-//     },
-//     0
-//   )
-//   .to(
-//     "#scene1 > img:nth-child(3)",
-//     {
-//       height: "200%",
-//       duration: 3,
-//       top: "-50%",
-//       // webkitFilter: "blur(10px)",
-//       // opacity: 0,
-//       ease: "sine.inOut",
-//       duration: 1.8,
-//     },
-//     0
-//   )
-//   .to(
-//     "#scene1 > img:nth-child(2)",
-//     {
-//       height: "200%",
-//       top: "-50%",
-//       // duration: 3,
-//       // webkitFilter: "blur(10px)",
-//       // opacity: 0,
-//       ease: "sine.inOut",
-//       duration: 2,
-//     },
-//     0
-//   )
-//   .to(
-//     "#scene1 > img:nth-child(1)",
-//     {
-//       height: "120%",
-//       // top: "-5%",
-//       duration: 3,
-//       ease: "sine.inOut",
-//       duration: 3,
-//     },
-//     0
-//   );
 
 tl.to("#img7", {
   scale: 3,
@@ -217,34 +152,3 @@ tl.to("#img7", {
     duration: 6
   },0);
 
-//   gsap.to("#scene1 > img:nth-child(5)", {
-//     scale: 3,
-//     duration: 3,
-//     webkitFilter:"blur(10px)",
-//     opacity: 0,
-//     ease: "sine.inOut",
-//     scrollTrigger: {
-//       trigger: "section",
-//       start: "top top",
-//       end: "+=140%",
-//       pin: true,
-//       scrub: true
-//       // markers: true
-//     }
-//   });
-
-//   gsap.to("#scene1 > img:nth-child(4)", {
-//     scale: 3,
-//     duration: 3,
-//     webkitFilter:"blur(10px)",
-//     opacity: 0,
-//     ease: "sine.inOut",
-//     scrollTrigger: {
-//       trigger: "section",
-//       start: "top top",
-//       end: "+=160%",
-//       pin: true,
-//       scrub: true
-//       // markers: true
-//     }
-//   });
