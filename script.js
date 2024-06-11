@@ -134,6 +134,7 @@ tl.to("#img7", {
     duration: 14
   },0)
   .to("#img3", {
+    top: "20%",
     scale: 2,
     marginTop: "30%",
     // webkitFilter: "blur(10px)",
@@ -149,6 +150,7 @@ tl.to("#img7", {
     duration: 22
   },0)
   .to("#img1", {
+   
     scale: 1.5,
     ease: "sine.inOut",
     duration: 32
@@ -168,6 +170,7 @@ tl.to("#img7", {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+  return
   const textElement = document.querySelector('#progress_text');
 
   function updateText(content) {
